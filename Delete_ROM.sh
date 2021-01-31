@@ -33,8 +33,9 @@ wheel=$media"/wheel"
 marquees=$media"/marquees"
 covers=$media"/covers"
 screenshots=$media"/screenshots"
-bn="$(basename -- $3)"    # filename
-fn="${bn%.*}"             # filename, no ext.
+bn="$(basename -- "$3")"    # filename
+#fn="${bn%.*}"             # filename, no ext.
+fn="$(echo "$bn" | cut -f 1 -d '.')"
 
 
 if [[ ! -f "$3" ]]; then
@@ -46,29 +47,29 @@ fi
 
 fls=()
 
-for file in $system/$fn.*; do
-  fls+=($file)
+for file in $system/"$fn".*; do
+  fls+=("$file")
 done
-for file in $videos/$fn.*; do
-  fls+=($file)
+for file in $videos/"$fn".*; do
+  fls+=("$file")
 done
-for file in $images/$fn.*; do
-  fls+=($file)
+for file in $images/"$fn".*; do
+  fls+=("$file")
 done
-for file in $wheel/$fn.*; do
-  fls+=($file)
+for file in $wheel/"$fn".*; do
+  fls+=("$file")
 done
-for file in $marquees/$fn.*; do
-  fls+=($file)
+for file in $marquees/"$fn".*; do
+  fls+=("$file")
 done
-for file in $screenshots/$fn.*; do
-  fls+=($file)
+for file in $screenshots/"$fn".*; do
+  fls+=("$file")
 done
-for file in $covers/$fn.*; do
-  fls+=($file)
+for file in $covers/"$fn".*; do
+  fls+=("$file")
 done
-for file in $boxart/$fn.*; do
-  fls+=($file)
+for file in $boxart/"$fn".*; do
+  fls+=("$file")
 done
 
 # Create text variable for found files
