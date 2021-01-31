@@ -3,6 +3,18 @@
 # https://github.com/xqtr/retropie-stuff
 # GPL3 License
 
+# THis script cleans a gamelist.xml, it removes entries that the rom files
+# don't exist anymore. To use it:
+
+# Add it to /opt/retropie/configs/all/runcommand-menu
+# Now go to the system you want and press to play a game.
+# While showing the runcommand script, press a key, and
+# go to User scripts. Select it and vouala... 
+
+# Restart emulationstation to apply the changes.
+
+# Backup files are created in format: gamelist_2020-12-39_230000.bak
+
 # based on meleu's scripts:
 # https://github.com/meleu/share
 # https://github.com/meleu/share/blob/master/gamelist-cleaner.sh
