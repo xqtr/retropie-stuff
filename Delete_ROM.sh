@@ -3,6 +3,17 @@
 # https://github.com/xqtr/retropie-stuff
 # GPL3 License
 
+# Add it to /opt/retropie/configs/all/runcommand-menu
+# Now go to the system you want and press to play a game.
+# While showing the runcommand script, press a key, and
+# go to User scripts. Select it and vouala... 
+
+# The script will delete the rom file and also let you select
+# if you want to delete images/covers etc.
+
+# It will not clean the gamelist.xml. Do that with the other 
+# script in this repo.
+
 #    $1 - the system (eg: atari2600, nes, snes, megadrive, fba, etc).
 #    $2 - the emulator (eg: lr-stella, lr-fceumm, lr-picodrive, pifba, etc).
 #    $3 - the full path to the rom file.
